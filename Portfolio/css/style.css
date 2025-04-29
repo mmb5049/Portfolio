@@ -1,0 +1,290 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    background: #212121;
+}
+
+.headline {
+    text-align: center;
+    background: black;
+    padding: 10px;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #FFFF66;
+    border-bottom: 3px solid #FFFF66;
+}
+
+#name {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+/* Introduction */
+#introduction {
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5%;
+}
+
+.home-content {
+    max-width: 90%;
+}
+
+.home-content h1 {
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+/* Grid Layouts */
+div#soloProject,
+div#groupProject {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* Medium Screens (Tablets, max-width 1024px) */
+@media (max-width: 1024px) {
+    div#soloProject,
+    div#groupProject {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+/* Small Screens (Mobile, max-width 768px) */
+@media (max-width: 768px) {
+    div#soloProject,
+    div#groupProject {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+}
+
+/* Images */
+div#soloProject img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+div#groupProject img{
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .home-content h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-content {
+        max-width: 100%;
+    }
+    .home-content h1 {
+        font-size: 24px;
+    }
+    .navbar {
+        padding: 10px;
+    }
+}
+
+p.groupProP
+{
+    width: 90%;
+}
+
+#perProject ul,
+#groupProject ul,
+#soloProject ul {
+    list-style: disc; /* Ensures bullets are used */
+    list-style-position: inside; /* Moves the bullets inside the content box */
+    margin-left: 20px; /* Adjust indentation */
+    color: white; /* Ensures visibility */
+}
+
+.contact-section {
+    width: 50%;
+    margin: 40px auto;
+    padding: 20px;
+    background: #444;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-section label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: white;
+    text-align: left;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    background: #555;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    border-color: #FFFF66;
+    background: #666;
+}
+
+.contact-section button {
+    background: #FFFF66;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-section button:hover {
+    background: #FFD700;
+}
+
+.direct,
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+
+.tech-box {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Background colors for each technology */
+.tech-box.csharp {
+    background-color: #9B59B6; /* Purple */
+    color: white;
+}
+
+.tech-box.unity {
+    background-color: #333333; /* Dark Gray */
+    color: white;
+}
+
+.tech-box.html {
+    background-color: #E44D26; /* Orange-Red */
+    color: white;
+}
+
+.tech-box.css {
+    background-color: #1572B6; /* Blue */
+    color: white;
+}
+
+.tech-box.monoGame{
+    background-color: yellow;
+    color: black;
+}
+
+.tech-box.javaScript
+{
+    background-color: purple;
+    color: white;
+}
+
+.directButton
+{
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.directButton.Game{
+    
+    background-image: linear-gradient(to right, red , orange);
+}
+
+.directButton.Git{
+    background-image:linear-gradient(
+        90deg,
+        #000 ,
+        #7E72FF ,
+        #000 
+      ); 
+    
+}
+
+.directButton.Web{
+    background-image:linear-gradient(to right, blue, rgb(34, 166, 210), blue);
+}
