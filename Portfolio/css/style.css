@@ -86,7 +86,8 @@ body {
 
 /* Grid Layouts */
 div#soloProject,
-div#groupProject {
+div#groupProject,
+div#professional {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
     gap: 20px;
@@ -111,19 +112,16 @@ div#groupProject {
 }
 
 /* Images */
-div#soloProject img {
+div#groupProject img,
+div#gizmoGoKart img,
+div#soloProject img{
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
 }
 
-div#groupProject img{
-    max-width: 400px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-}
+
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
@@ -151,7 +149,8 @@ p.groupProP
 
 #perProject ul,
 #groupProject ul,
-#soloProject ul {
+#soloProject ul,
+#professional ul {
     list-style: disc; /* Ensures bullets are used */
     list-style-position: inside; /* Moves the bullets inside the content box */
     margin-left: 20px; /* Adjust indentation */
@@ -270,9 +269,13 @@ p.groupProP
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.directButton.Game{
+.directButton.Gizmo{
     
-    background-image: linear-gradient(to right, red , orange);
+    background-image: linear-gradient(90deg, #DC3F2B , #F77128, #DC3F2B);
+}
+
+.directButton.Game{
+        background-image: linear-gradient(to right, #00C853, #00E5FF);
 }
 
 .directButton.Git{
